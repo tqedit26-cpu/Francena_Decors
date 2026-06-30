@@ -43,8 +43,8 @@
         </div>
         <div class="mb-4 sidebar-header">Settings</div>
         <div class="nav nav-pills flex-column gap-2">
-          @if(Route::has('theme.settings.edit'))
-            <a href="{{ route('theme.settings.edit') }}" class="nav-link d-flex align-items-center {{ Route::is('theme.settings.*') ? 'active' : 'text-white' }}">
+          @if(Route::has('admin.theme.settings.edit'))
+            <a href="{{ route('admin.theme.settings.edit') }}" class="nav-link d-flex align-items-center {{ Route::is('admin.theme.settings.*') ? 'active' : 'text-white' }}">
               <i class="fa-solid fa-paintbrush fa-fw me-2"></i>
               Theme Settings
             </a>
@@ -56,6 +56,11 @@
           <a href="{{ route('admin.media.index') }}" class="nav-link d-flex align-items-center {{ Route::is('admin.media.*') ? 'active' : 'text-white' }}">
             <i class="fa-solid fa-photo-film fa-fw me-2"></i>
             Media Library
+          </a>
+          <div class="mt-4 sidebar-header">Appearance</div>
+          <a href="{{ route('admin.header.settings.edit') }}" class="nav-link d-flex align-items-center {{ Route::is('admin.header.settings.*') ? 'active' : 'text-white' }}">
+            <i class="fa-solid fa-header fa-fw me-2"></i>
+            Header
           </a>
           <a href="{{ route('admin.dashboard') }}" class="nav-link d-flex align-items-center {{ Route::is('admin.dashboard') ? 'active' : 'text-white' }}">
             <i class="fa-solid fa-chart-line me-2"></i>

@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\HeaderLogoController;
+use App\Http\Controllers\Admin\HeaderSettingController;
+use App\Http\Controllers\Admin\HeaderTopbarController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\ThemeSettingController;
@@ -41,6 +44,21 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::name('theme.settings.')->group(function () {
             Route::get('theme-settings', [ThemeSettingController::class, 'edit'])->name('edit');
             Route::put('theme-settings', [ThemeSettingController::class, 'update'])->name('update');
+        });
+
+        Route::name('header.settings.')->group(function () {
+            Route::get('header-settings', [HeaderSettingController::class, 'edit'])->name('edit');
+            Route::put('header-settings', [HeaderSettingController::class, 'update'])->name('update');
+        });
+
+        Route::name('header.topbars.')->group(function () {
+            Route::get('header-topbars', [HeaderTopbarController::class, 'edit'])->name('edit');
+            Route::put('header-topbars', [HeaderTopbarController::class, 'update'])->name('update');
+        });
+
+        Route::name('header.logos.')->group(function () {
+            Route::get('header-logos', [HeaderLogoController::class, 'edit'])->name('edit');
+            Route::put('header-logos', [HeaderLogoController::class, 'update'])->name('update');
         });
 
         Route::get('site-settings', [SiteSettingController::class, 'edit'])->name('site-settings.edit');
