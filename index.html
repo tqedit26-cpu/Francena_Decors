@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fancy Decorators delivers luxury construction, premium residential and commercial builds, upscale renovations, and bespoke interior design across the metropolitan area." />
+  <meta name="keywords" content="luxury construction, premium builder, residential construction, commercial construction, interior design, home renovation, elite contractors, custom build services" />
+  <meta name="robots" content="index, follow" />
+  <title>Fancy Decorators | Luxury Construction Company</title>
+  <meta name="theme-color" content="#d4af5f" />
+  <meta property="og:title" content="Fancy Decorators | Luxury Construction Company" />
+  <meta property="og:description" content="Premium construction and design services for luxury residential, commercial, and interior projects. Turn your vision into award-worthy spaces." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.fancydecorators.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80" />
+  <meta property="og:site_name" content="Fancy Decorators" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fancy Decorators | Luxury Construction Company" />
+  <meta name="twitter:description" content="Premium construction and design services for luxury residential, commercial, and interior projects." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80" />
+  <meta name="twitter:site" content="@FancyDecorators" />
+  <link rel="canonical" href="https://www.fancydecorators.com/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Fancy Decorators",
+    "url": "https://www.fancydecorators.com/",
+    "logo": "https://www.fancydecorators.com/logo.png",
+    "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80",
+    "description": "Premium luxury construction, high-end renovations, and custom interior design services for residential and commercial clients.",
+    "telephone": "+1 234 567 890",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "25 Royal Avenue",
+      "addressLocality": "Downtown City",
+      "addressRegion": "State",
+      "postalCode": "12345",
+      "addressCountry": "USA"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Metropolitan Area"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/FancyDecorators",
+      "https://www.instagram.com/FancyDecorators",
+      "https://www.linkedin.com/company/FancyDecorators"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="preloader">
+    <div class="spinner">
+      <div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+
+  <header class="sticky-top header-nav">
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 py-3" aria-label="Primary navigation">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <div class="brand-mark">FD</div>
+        <div class="brand-text ms-3">
+          <span class="brand-title">Fancy Decorators</span>
+          <p>Luxury Construction</p>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-3">
+            <button id="themeToggle" type="button" class="btn btn-outline-light btn-sm" aria-label="Toggle color theme"><i class="fa-solid fa-moon"></i></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section d-flex align-items-center text-white text-center">
+      <div class="overlay"></div>
+      <div class="hero-shapes">
+        <span class="floating-shape shape-1"></span>
+        <span class="floating-shape shape-2"></span>
+        <span class="floating-shape shape-3"></span>
+        <span class="floating-shape shape-4"></span>
+      </div>
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')"></div>
+        <div class="slider-controls" aria-label="Hero slider navigation">
+          <button id="heroPrev" type="button" class="slider-btn prev-slide" aria-label="Previous slide"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <button id="heroNext" type="button" class="slider-btn next-slide" aria-label="Next slide"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="container position-relative z-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="120">
+            <p class="eyebrow">Luxury Construction & Design</p>
+            <h1 class="display-4 fw-bold">Building Your Dream Into Reality</h1>
+            <p class="typed-text"><span id="typedText"></span><span class="typed-cursor">|</span></p>
+            <p class="lead mx-auto mt-4">Premium craftsmanship for elite residential, commercial and interior architecture.</p>
+            <div class="hero-buttons mt-5">
+              <a href="#contact" class="btn btn-gold btn-lg me-3">Get Quote</a>
+              <a href="#projects" class="btn btn-outline-light btn-lg">Our Projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-5 section-bg">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">About Us</span>
+          <h2>Elegant Construction with a Premium Touch</h2>
+          <p>Fancy Decorators builds luxurious residential and commercial spaces with professional craftsmanship, superior materials, and a commitment to on-time delivery. Our team specializes in high-end construction, bespoke interior design, and complete renovation services for discerning clients.</p>
+        </div>
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="glass-card p-4">
+              <h3>Our Story</h3>
+              <p>Fancy Decorators has been transforming spaces for discerning clients. We combine artistic vision with construction excellence to deliver projects that exceed expectations.</p>
+              <div class="row mt-4">
+                <div class="col-6 mb-3">
+                  <h5>Mission</h5>
+                  <p>To deliver premium construction experiences that feel seamless and indulgent.</p>
+                </div>
+                <div class="col-6 mb-3">
+                  <h5>Vision</h5>
+                  <p>To be the leading luxury builder recognized for craft, trust, and innovation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3 counters">
+              <div class="col-6">
+                <div class="counter-card p-4 text-center">
+                  <span class="counter" data-target="320">0</span>
+                  <p>Projects Completed</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="counter-card p-4 text-center">
+                  <span class="counter" data-target="240">0</span>
+                  <p>Happy Clients</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="counter-card p-4 text-center">
+                  <span class="counter" data-target="18">0</span>
+                  <p>Years Experience</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="counter-card p-4 text-center">
+                  <span class="counter" data-target="65">0</span>
+                  <p>Team Members</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-5 text-white">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">Our Services</span>
+          <h2>Complete Luxury Construction Services</h2>
+          <p>From custom residential builds to executive commercial fit-outs, our construction services are designed to support premium projects from concept through completion.</p>
+        </div>
+        <div class="search-box mb-4" role="search" aria-label="Search services">
+          <input id="serviceSearch" type="text" class="form-control search-input" placeholder="Search services..." aria-label="Search services" />
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="residential construction home luxury">
+              <div class="service-icon"><i class="fa-solid fa-house-chimney-user"></i></div>
+              <h4>Residential Construction</h4>
+              <p>Build elegant homes with premium finishes and lasting quality.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="commercial construction office premium">
+              <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+              <h4>Commercial Construction</h4>
+              <p>Deliver sophisticated commercial properties with strategic planning.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="interior design decor style">
+              <div class="service-icon"><i class="fa-solid fa-pencil-ruler"></i></div>
+              <h4>Interior Design</h4>
+              <p>Create immersive luxury interiors with strong personality.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="exterior design landscape facade">
+              <div class="service-icon"><i class="fa-solid fa-tree-city"></i></div>
+              <h4>Exterior Design</h4>
+              <p>Design elegant exterior landscapes and facades for grand appeal.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="painting finishes color textures">
+              <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+              <h4>Painting</h4>
+              <p>Finish projects with flawless color applications and texture work.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="false ceiling ceiling design lighting ambiance">
+              <div class="service-icon"><i class="fa-solid fa-border-style"></i></div>
+              <h4>False Ceiling</h4>
+              <p>Clever ceiling designs that enhance light and spatial harmony.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="modular kitchen kitchen design cabinetry appliances">
+              <div class="service-icon"><i class="fa-solid fa-utensils"></i></div>
+              <h4>Modular Kitchen</h4>
+              <p>Custom kitchens built for luxury cooking and refined living.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="renovation remodel upgrade modernize">
+              <div class="service-icon"><i class="fa-solid fa-sync-alt"></i></div>
+              <h4>Renovation</h4>
+              <p>Revitalize existing spaces with modern elegance and functionality.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="waterproofing protection damp proof moisture barrier">
+              <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+              <h4>Waterproofing</h4>
+              <p>Protect structures with reliable waterproof systems and detailing.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="electrical wiring lighting outlets safety">
+              <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h4>Electrical Work</h4>
+              <p>Expert electrical installations with safety and premium finishes.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="plumbing pipes fixtures bathrooms kitchens">
+              <div class="service-icon"><i class="fa-solid fa-faucet"></i></div>
+              <h4>Plumbing</h4>
+              <p>High-quality plumbing solutions for comfort and durability.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card glass-card p-4 h-100" data-service="tiles flooring hardwood marble porcelain">
+              <div class="service-icon"><i class="fa-solid fa-square-full"></i></div>
+              <h4>Tiles & Flooring</h4>
+              <p>Luxury flooring installations with elegant materials and finish.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="py-5 section-bg">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">Why Choose Us</span>
+          <h2>Trusted Premium Construction Partner</h2>
+          <p>With decades of luxury construction experience, we deliver exceptional quality, refined aesthetics, and transparent project management for clients who expect the highest standards.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box p-4 h-100">
+              <i class="fa-solid fa-gem"></i>
+              <h5>Premium Quality</h5>
+              <p>Top-tier materials and craftsmanship are standard in every project.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box p-4 h-100">
+              <i class="fa-solid fa-hard-hat"></i>
+              <h5>Experienced Team</h5>
+              <p>Seasoned professionals ensure a flawless and efficient build.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box p-4 h-100">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <h5>Affordable Pricing</h5>
+              <p>Transparent proposals and premium value at every stage.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box p-4 h-100">
+              <i class="fa-solid fa-clock"></i>
+              <h5>On-Time Delivery</h5>
+              <p>Projects completed on schedule without compromise.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box p-4 h-100">
+              <i class="fa-solid fa-wrench"></i>
+              <h5>Modern Equipment</h5>
+              <p>Advanced tools and technology keep work precise and clean.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-box p-4 h-100">
+              <i class="fa-solid fa-users"></i>
+              <h5>Customer Satisfaction</h5>
+              <p>Strong communication and support from concept to handover.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-5 text-white">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">Featured Projects</span>
+          <h2>Exceptional Projects for Distinctive Spaces</h2>
+          <p>A curated gallery of premium residential, commercial, interior and exterior work.</p>
+        </div>
+        <div class="text-center mb-4">
+          <div class="btn-group" role="group" aria-label="Project filter">
+            <button type="button" class="btn btn-outline-light active filter-btn" aria-pressed="true" data-filter="all">All</button>
+            <button type="button" class="btn btn-outline-light filter-btn" aria-pressed="false" data-filter="residential">Residential</button>
+            <button type="button" class="btn btn-outline-light filter-btn" aria-pressed="false" data-filter="commercial">Commercial</button>
+            <button type="button" class="btn btn-outline-light filter-btn" aria-pressed="false" data-filter="interior">Interior</button>
+            <button type="button" class="btn btn-outline-light filter-btn" aria-pressed="false" data-filter="exterior">Exterior</button>
+          </div>
+        </div>
+        <div class="row g-4 project-grid">
+          <div class="col-sm-6 col-lg-4 project-item residential">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Luxury residential construction project with premium finishes" loading="lazy" decoding="async" />
+              <div class="project-info">
+                <h5>Luxury Villa</h5>
+                <p>Residential</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 project-item commercial">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="High-end commercial building construction project" loading="lazy" decoding="async" />
+              <div class="project-info">
+                <h5>Office Complex</h5>
+                <p>Commercial</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 project-item interior">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Premium interior design and construction project" loading="lazy" decoding="async" />
+              <div class="project-info">
+                <h5>Modern Lounge</h5>
+                <p>Interior</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 project-item exterior">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Exterior architecture and facade renovation project" loading="lazy" decoding="async" />
+              <div class="project-info">
+                <h5>Facade Renewal</h5>
+                <p>Exterior</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 project-item residential interior">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-15129150965-9f3f5fcbafc7?auto=format&fit=crop&w=900&q=80" alt="Elegant residential interior construction and renovation" loading="lazy" decoding="async" />
+              <div class="project-info">
+                <h5>Elegant Residence</h5>
+                <p>Residential / Interior</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 project-item commercial exterior">
+            <article class="project-card">
+              <img src="https://images.unsplash.com/photo-1505693416388-7b9d7ed04e46?auto=format&fit=crop&w=900&q=80" alt="Luxury commercial exterior construction and landscaping" loading="lazy" decoding="async" />
+              <div class="project-info">
+                <h5>Signature Plaza</h5>
+                <p>Commercial / Exterior</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-5 section-bg">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">Testimonials</span>
+          <h2>What Our Clients Say</h2>
+          <p>Trusted by clients who appreciate luxury, transparency, and exceptional delivery.</p>
+        </div>
+        <div class="testimonial-slider position-relative">
+          <div class="testimonial-item active">
+            <p>"Fancy Decorators delivered our dream villa with spectacular detail, professionalism, and care."</p>
+            <h5>Amelia Rodgers</h5>
+            <span>Residential Client</span>
+          </div>
+          <div class="testimonial-item">
+            <p>"The team turned our commercial space into a premium environment that impresses every visitor."</p>
+            <h5>Marcus Lee</h5>
+            <span>Business Owner</span>
+          </div>
+          <div class="testimonial-item">
+            <p>"From planning to handover, every step felt refined and effortless. Highly recommended."</p>
+            <h5>Sophia Turner</h5>
+            <span>Design Partner</span>
+          </div>
+          <div class="testimonial-controls d-flex justify-content-center gap-3 mt-4" aria-label="Testimonial navigation">
+            <button id="testPrev" type="button" class="btn btn-gold btn-sm prev-slide" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+            <button id="testNext" type="button" class="btn btn-outline-light btn-sm next-slide" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="py-5 text-white">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">Our Process</span>
+          <h2>From Vision to Premium Delivery</h2>
+          <p>A refined five-step process built for clarity and luxury execution.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <div class="process-card p-4 h-100">
+              <div class="process-step">1</div>
+              <h5>Consultation</h5>
+              <p>Understand your vision with expert guidance.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <div class="process-card p-4 h-100">
+              <div class="process-step">2</div>
+              <h5>Planning</h5>
+              <p>Build a clear roadmap with premium specifications.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <div class="process-card p-4 h-100">
+              <div class="process-step">3</div>
+              <h5>Design</h5>
+              <p>Create stunning interiors and architectural details.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <div class="process-card p-4 h-100">
+              <div class="process-step">4</div>
+              <h5>Construction</h5>
+              <p>Execute with precision, safety, and premium care.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl-2">
+            <div class="process-card p-4 h-100">
+              <div class="process-step">5</div>
+              <h5>Handover</h5>
+              <p>Deliver a complete space ready to enjoy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-5 section-bg">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">FAQ</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Answers to common questions about our luxury construction process.</p>
+        </div>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item glass-card">
+            <h2 class="accordion-header" id="faqOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">How long does a custom project take?</button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Project timelines depend on scope, but most residential and interior projects complete in 12-24 weeks with our premium process.</div>
+            </div>
+          </div>
+          <div class="accordion-item glass-card">
+            <h2 class="accordion-header" id="faqTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Do you handle permits and approvals?</button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Yes, our team coordinates necessary permits, approvals, and compliance so you can enjoy a smooth project experience.</div>
+            </div>
+          </div>
+          <div class="accordion-item glass-card">
+            <h2 class="accordion-header" id="faqThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">Can you renovate existing luxury spaces?</button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Absolutely. We specialize in premium renovations that refresh and elevate existing homes and commercial interiors.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 text-white">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">Contact</span>
+          <h2>Start Your Luxury Project</h2>
+          <p>Contact Fancy Decorators today to schedule a consultation for sophisticated home builds, commercial construction, or high-end renovation services.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="glass-card p-4 h-100">
+              <h4>Send a Request</h4>
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="mb-3">
+                  <label class="visually-hidden" for="contactName">Name</label>
+                  <input id="contactName" name="name" type="text" class="form-control" placeholder="Name" autocomplete="name" required />
+                </div>
+                <div class="mb-3">
+                  <label class="visually-hidden" for="contactPhone">Phone</label>
+                  <input id="contactPhone" name="phone" type="tel" class="form-control" placeholder="Phone" autocomplete="tel" required />
+                </div>
+                <div class="mb-3">
+                  <label class="visually-hidden" for="contactEmail">Email</label>
+                  <input id="contactEmail" name="email" type="email" class="form-control" placeholder="Email" autocomplete="email" required />
+                </div>
+                <div class="mb-3">
+                  <label class="visually-hidden" for="contactService">Service</label>
+                  <input id="contactService" name="service" type="text" class="form-control" placeholder="Service" autocomplete="off" required />
+                </div>
+                <div class="mb-3">
+                  <label class="visually-hidden" for="contactMessage">Message</label>
+                  <textarea id="contactMessage" name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <button class="btn btn-gold btn-lg w-100" type="submit">Send Message</button>
+                <div id="formMessage" class="form-feedback" role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="map-card glass-card p-0 overflow-hidden">
+              <div class="map-placeholder d-flex align-items-center justify-content-center">
+                <div class="map-text text-center">
+                  <i class="fa-solid fa-map-location-dot fa-2xl mb-3"></i>
+                  <h5>Google Map Placeholder</h5>
+                  <p>Imagine your project location here with a premium branded map view.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-5 section-bg text-white">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6 col-lg-3">
+          <h5>Quick Links</h5>
+          <ul class="footer-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5>Services</h5>
+          <ul class="footer-list">
+            <li>Residential</li>
+            <li>Commercial</li>
+            <li>Interior Design</li>
+            <li>Renovation</li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5>Address</h5>
+          <p>25 Royal Avenue, Downtown City, Luxury District</p>
+          <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+          <p><i class="fa-solid fa-envelope"></i> hello@fancydecorators.com</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5>Follow Us</h5>
+          <div class="social-icons d-flex gap-3 mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy text-center mt-4">&copy; 2026 Fancy Decorators. Crafted for premium building experiences.</div>
+    </div>
+  </footer>
+
+  <div class="quick-actions" aria-label="Quick contact actions">
+    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="action-btn whatsapp" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+    <a href="tel:+1234567890" class="action-btn call" aria-label="Call us"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
+    <a href="mailto:hello@fancydecorators.com" class="action-btn email" aria-label="Email us"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+  </div>
+
+  <div id="galleryModal" class="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="galleryCaption" aria-hidden="true">
+    <button type="button" class="close-modal" aria-label="Close gallery">&times;</button>
+    <img class="modal-img" src="" alt="Project view" />
+    <p id="galleryCaption" class="modal-caption"></p>
+  </div>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Scroll back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
