@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\ThemeSettingController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -26,6 +27,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::middleware('auth')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+        Route::get('media', [MediaController::class, 'index'])->name('media.index');
+        Route::get('media/create', [MediaController::class, 'create'])->name('media.create');
+        Route::post('media', [MediaController::class, 'store'])->name('media.store');
+        Route::get('media/{media}/download', [MediaController::class, 'download'])->name('media.download');
+        Route::get('media/{media}/edit', [MediaController::class, 'edit'])->name('media.edit');
+        Route::put('media/{media}', [MediaController::class, 'update'])->name('media.update');
+        Route::delete('media/{media}', [MediaController::class, 'destroy'])->name('media.destroy');
+        Route::post('media/bulk-delete', [MediaController::class, 'bulkDelete'])->name('media.bulk-delete');
+        Route::get('media/{media}', [MediaController::class, 'show'])->name('media.show');
 
         Route::name('theme.settings.')->group(function () {
             Route::get('theme-settings', [ThemeSettingController::class, 'edit'])->name('edit');

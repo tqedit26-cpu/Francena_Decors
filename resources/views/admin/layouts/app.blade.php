@@ -53,6 +53,10 @@
             <i class="fa-solid fa-gear me-2"></i>
             Site Settings
           </a>
+          <a href="{{ route('admin.media.index') }}" class="nav-link d-flex align-items-center {{ Route::is('admin.media.*') ? 'active' : 'text-white' }}">
+            <i class="fa-solid fa-photo-film fa-fw me-2"></i>
+            Media Library
+          </a>
           <a href="{{ route('admin.dashboard') }}" class="nav-link d-flex align-items-center {{ Route::is('admin.dashboard') ? 'active' : 'text-white' }}">
             <i class="fa-solid fa-chart-line me-2"></i>
             Dashboard
