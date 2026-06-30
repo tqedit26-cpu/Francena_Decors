@@ -18,12 +18,12 @@
   <meta name="twitter:title" content="Fancy Decorators | Luxury Construction Company" />
   <meta name="twitter:description" content="Premium construction and design services for luxury residential, commercial, and interior projects." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80" />
-  <meta name="twitter:site" content="@FancyDecorators" />
+  <meta name="twitter:site" content="@@FancyDecorators" />
   <link rel="canonical" href="https://www.fancydecorators.com/" />
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@@context": "https://schema.org",
+    "@@type": "HomeAndConstructionBusiness",
     "name": "Fancy Decorators",
     "url": "https://www.fancydecorators.com/",
     "logo": "https://www.fancydecorators.com/logo.png",
@@ -31,7 +31,7 @@
     "description": "Premium luxury construction, high-end renovations, and custom interior design services for residential and commercial clients.",
     "telephone": "+1 234 567 890",
     "address": {
-      "@type": "PostalAddress",
+      "@@type": "PostalAddress",
       "streetAddress": "25 Royal Avenue",
       "addressLocality": "Downtown City",
       "addressRegion": "State",
@@ -39,12 +39,12 @@
       "addressCountry": "USA"
     },
     "areaServed": {
-      "@type": "City",
+      "@@type": "City",
       "name": "Metropolitan Area"
     },
     "openingHoursSpecification": [
       {
-        "@type": "OpeningHoursSpecification",
+        "@@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
         "opens": "08:00",
         "closes": "18:00"
