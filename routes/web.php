@@ -148,6 +148,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('service-faqs/{serviceFaq}/toggle-status', [ServiceFaqController::class, 'toggleStatus'])->name('service-faqs.toggle-status');
 
         Route::post('project-categories/bulk', [ProjectCategoryController::class, 'bulk'])->name('project-categories.bulk');
+        Route::resource('project-categories', ProjectCategoryController::class)->except(['show']);
+
+        Route::post('projects/bulk', [ProjectController::class, 'bulk'])->name('projects.bulk');
         Route::post('projects/{project}/toggle-status', [ProjectController::class, 'toggleStatus'])->name('projects.toggle-status');
         Route::post('projects/{project}/restore', [ProjectController::class, 'restore'])->name('projects.restore');
         Route::post('projects/{project}/duplicate', [ProjectController::class, 'duplicate'])->name('projects.duplicate');
